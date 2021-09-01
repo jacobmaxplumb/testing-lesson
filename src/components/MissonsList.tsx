@@ -1,6 +1,12 @@
-const MissionsList = () => {
+const MissionsList = (props: any) => {
     return(
-        <div>Mission List</div>
+        <div>
+            {props.missions.map((mission: any, key: any) => (
+                <div key={key} data-testid="mission">
+                    {mission.mission_name}
+                </div>
+            ))}
+        </div>
     );
 }
 
