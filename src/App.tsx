@@ -3,11 +3,14 @@ import { fetchMissions } from './api/fetchMissions';
 import MissionForm from './components/MissionForm';
 import MissionsList from './components/MissonsList';
 
-function App() {
+function App(props: any) {
+  const randomFunction = () => {
+    console.log('yay');
+  }
   return (
     <div className="App">
       <h1>Space Missions</h1>
-      <MissionForm />
+      <MissionForm getData={randomFunction} />
       <MissionsList />
     </div>
   );
